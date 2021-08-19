@@ -1,0 +1,139 @@
+html, 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+i.bi-pencil {
+    color: orange;
+}
+
+i.bi-eraser {
+    color: red;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+i:active {
+    position: relative;
+    top: 2px;
+}
+
+div.nav {
+    width: 100%;
+    display: flex;
+    height: 50px;
+}
+
+div.nav__item {
+    padding: 10px 20px;
+}
+
+div.nav a {
+    text-decoration: none;
+    color: black;
+}
+
+div.nav__item.active a {
+    color: tomato;
+}
+
+div.nav__item:hover {
+    cursor: pointer;
+}
+
+div.nav__item:active {
+    position: relative;
+    top: 2px;
+}
+
+section {
+    display: flex;
+    padding: 15px 5%;
+    justify-content: space-evenly;
+    height: calc(100vh - 150px);
+}
+
+div.employees table {
+    border-collapse: collapse;
+    max-height: 100%;
+    overflow: hidden scroll;
+    display: block;
+}
+
+div.employees thead th {
+    z-index: 2px;
+    top: 0px;
+    position: sticky;
+    background: tomato;
+    color: white;
+}
+
+div.employees tfoot th {
+    z-index: 2px;
+    bottom: 0px;
+    position: sticky;
+    background: #198754;
+    color: white;
+    font-weight: normal;
+}
+
+div.employees tfoot th:hover {
+    cursor: pointer;
+}
+
+div.employees tfoot th:active {
+    background: #198754;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+
+div.employees  tbody tr:nth-child(n+2) {
+    border-top: 1px solid rgb(233, 233, 233);
+}
+
+div.employees tbody td:hover {
+    cursor: pointer;
+}
+
+div.employees  tbody td:active {
+    color: tomato;
+}
+
+
+div.employee-info {
+    padding: 0px 5%;
+    border: solid 1px grey;
+    border-radius: 5px;
+}
+
+div.employee-info tbody td:nth-child(1) {
+    width: 40%;
+    text-align: left;
+}
+
+
+div.employee-new {
+    border: solid 1px #198754;
+    border-radius: 5px;
+    display: none;
+}
+
+div.employee-new form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+div.employee-new form legend {
+    text-align: center;
+}
+
+div.employee-new label,
+div.employee-new div.alert {
+    margin-top: 10px;
+}

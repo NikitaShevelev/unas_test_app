@@ -1,0 +1,63 @@
+
+CREATE TABLE `employees` (
+  `employee_id` int NOT NULL AUTO_INCREMENT,
+  `name` text NOT NULL,
+  `salary` text NOT NULL,
+  `department_id` int NOT NULL,
+  PRIMARY KEY (`employee_id`),
+  KEY `depar_idx` (`department_id`),
+  CONSTRAINT `department_id` FOREIGN KEY (`department_id`) REFERENCES `departments` (`department_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `departments` (
+  `department_id` int NOT NULL AUTO_INCREMENT,
+  `name` text,
+  PRIMARY KEY (`department_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+INSERT INTO 
+	unas.departments (name) 
+VALUES
+	('Отдел разработки'),
+	('Отдел кадров'),
+    ('Финансовый отдел'),
+    ('Комерческий отдел'),
+    ('Юридический отдел')
+;
+
+
+INSERT INTO unas.employees (name, salary, department_id) 
+VALUES
+	('Соломинцева Доминика Василиевна', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Чиркова Александра Кузьмевна', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Павленко Ян Наумович', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Катькин Семен Евлампиевич', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Глинка Кузьма Агапович', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Краевский Мир Александрович', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Головченко Ева Павеловна', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Гурьева Агафья Петровна', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Гордеев Лев Касьянович', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Потрепалова Зоя Ивановна', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Снытко Фома Севастьянович', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Лимонова Вера Леонидовна', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Бок Клавдий Игнатиевич', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Ямалетдинова Лада Потаповна', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Куксов Лукьян Иннокентиевич', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Наумова Анфиса Родионовна', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Перехваткина Эльвира Степановна', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Дубков Семён Матвеевич', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Шерешевский Захар Якубович', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Яговенко Денис Геннадиевич', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Кравцев Моисей Ипатович', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Шкиряк Святослав Аникитевич', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Ухова Алина Владленовна', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Ярощука Татьяна Карповна', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Абоймов Николай Адамович', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Михалицын Герасим Титович', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Яшнов Соломон Михаилович', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Кошелькова Лиана Константиновна', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Шеркова Варвара Михеевна', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Жилин Адам Юриевич', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
+    ('Каблуков Моисей Эрнестович', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5)))
+;
