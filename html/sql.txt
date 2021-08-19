@@ -1,3 +1,4 @@
+create database unas;
 
 CREATE TABLE `employees` (
   `employee_id` int NOT NULL AUTO_INCREMENT,
@@ -16,8 +17,8 @@ CREATE TABLE `departments` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
-INSERT INTO 
-	unas.departments (name) 
+INSERT INTO
+	unas.departments (name)
 VALUES
 	('Отдел разработки'),
 	('Отдел кадров'),
@@ -27,7 +28,7 @@ VALUES
 ;
 
 
-INSERT INTO unas.employees (name, salary, department_id) 
+INSERT INTO unas.employees (name, salary, department_id)
 VALUES
 	('Соломинцева Доминика Василиевна', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
     ('Чиркова Александра Кузьмевна', (FLOOR( 10000+ RAND( ) *50000)), (FLOOR( 1+ RAND( ) *5))),
